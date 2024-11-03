@@ -45,7 +45,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			//función para importar contacto
 			getContacts: async () => {
-				const resp = await fetch(process.env.BACKEND_URL+`agendas/ademontel`);
+				const resp = await fetch(process.env.BACKEND_URL+`agendas/jime`);
 				if(resp.status == 404){
 					await getActions().createAgenda()  // Se crea la nueva agenda usando el método Actions
 					return null
@@ -58,7 +58,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			createContact: async (newContact) => {
 				const myHeaders = new Headers();
 				myHeaders.append("Content-Type", "application/json");
-				const resp = await fetch(process.env.BACKEND_URL+`agendas/ademontel/contacts`, {
+				const resp = await fetch(process.env.BACKEND_URL+`agendas/jime/contacts`, {
 					method: 'POST',
 					headers: myHeaders,
 					body: JSON.stringify(newContact),
@@ -71,7 +71,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				try {
 					const myHeaders = new Headers();
 					myHeaders.append("Content-Type", "application/json");
-					const resp = await fetch(process.env.BACKEND_URL+`agendas/ademontel`, {
+					const resp = await fetch(process.env.BACKEND_URL+`agendas/jime`, {
 						method: "POST",
 						headers: { "Content-Type": "application/json" }
 					})
@@ -84,7 +84,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 			 deleteContact: async (contact_id) => {
-				const resp = await fetch(process.env.BACKEND_URL+`agendas/ademontel/contacts/${contact_id}`, {
+				const resp = await fetch(process.env.BACKEND_URL+`agendas/jime/contacts/${contact_id}`, {
 					method: "DELETE",
 				});
 		
@@ -98,7 +98,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				const myHeaders = new Headers();
 				myHeaders.append("Content-Type", "application/json");
 			
-				const resp = await fetch(`${process.env.BACKEND_URL}agendas/ademontel/contacts/${id}`, {
+				const resp = await fetch(`${process.env.BACKEND_URL}agendas/jime/contacts/${id}`, {
 					method: "PUT",
 					headers: myHeaders,
 					body: JSON.stringify(updatedContact),
