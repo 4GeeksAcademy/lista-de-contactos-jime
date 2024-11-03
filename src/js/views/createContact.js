@@ -39,26 +39,26 @@ export const CreateContact = () => {
 
     return(
         <>
-        <div className="container">
+        <div className="container w-50 bg-light">
             <div className="mb-3">
                 <label htmlFor="Full Name" className="form-label fw-bold">Full name</label>
-                <input onChange={(evento) => setContact({...contact, name:evento.target.value})} value={contact.name || ''} type="text" className="form-control" placeholder="Full name" />
-                <div className="form-text">We'll never share your email with anyone else.</div>
+                <input onChange={(evento) => setContact({...contact, name:evento.target.value})} value={contact.name || ''} type="text" className="form-control" placeholder autoFocus="Full name" />
+                
             </div>
             <div className="mb-3">
                 <label htmlFor="email" className="form-label fw-bold">Email</label>
                 <input onChange={(evento) => setContact({...contact, email:evento.target.value })} value={contact.email || ''} type="email" className="form-control" placeholder="Email" />
-                <div className="form-text">We'll never share your email with anyone else.</div>
+               
             </div>
             <div className="mb-3">
                 <label htmlFor="phone" className="form-label fw-bold">Enter phone</label>
                 <input onChange={(evento) => setContact({...contact, phone:evento.target.value})} value={contact.phone || ''} type="phone" className="form-control" placeholder="Enter phone" />
-                <div className="form-text">We'll never share your email with anyone else.</div>
+                
             </div>
             <div className="mb-3">
                 <label htmlFor="address" className="form-label fw-bold">Enter address</label>
                 <input onChange={(evento) => setContact({...contact, address:evento.target.value})} value={contact.address || ''} type="text" className="form-control" placeholder="Enter address" />
-                <div className="form-text">We'll never share your email with anyone else.</div>
+               
             </div>
             <div className="d-flex justify-content-center gap-5">
                 <button onClick={handler} type="submit" className={`btn mr-5 ${isEditing ? "btn-warning" : "btn-primary"}`}>

@@ -6,7 +6,7 @@ export const Navbar = () => {
     const { actions } = useContext(Context);
 
     return (
-        <nav className="navbar navbar-light m-3 d-flex justify-content-end">
+        <nav className="navbar navbar-light my-3 d-flex justify-content-center">
             <div className="ml-auto">
                 <Link to="/create">
                     <button

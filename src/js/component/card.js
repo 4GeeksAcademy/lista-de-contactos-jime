@@ -8,7 +8,7 @@ export const ContactCard = (props) => {
     const navigate = useNavigate();
     return (
         <div className="container d-flex justify-content-center">
-            <div className="card mb-12 w-50" >
+            <div className="card mb-12 w-50 bg-light" >
                 <div className="row g-0">
                     <div className="col-md-3">
                         <img src={"https://i.pravatar.cc/200" + "?u=" + props.name} className="img-fluid rounded-circle p-3" alt="..." />
